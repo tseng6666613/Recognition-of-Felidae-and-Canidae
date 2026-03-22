@@ -1,14 +1,14 @@
-import tensorflow as tf  #深度學習主套件
-from tensorflow.keras.preprocessing.image import ImageDataGenerator   #圖片資料自動產生器，支援資料增強（augmentation）
-from tensorflow.keras.applications import MobileNetV2                 #內建的「輕量級圖像辨識模型」，拿來做轉移學習
-from tensorflow.keras.models import Model                             #模型建構用的元件
+import tensorflow as tf  
+from tensorflow.keras.preprocessing.image import ImageDataGenerator   #資料增強（augmentation）
+from tensorflow.keras.applications import MobileNetV2                 #內建輕量級圖像辨識模型，遷移式學習
+from tensorflow.keras.models import Model                             
 from tensorflow.keras.layers import Dense, GlobalAveragePooling2D     
 import os
 
 # 圖片與訓練設定(定義參數（圖片大小、批次、訓練次數）)
 IMAGE_SIZE = (224, 224)       # 輸入圖片大小（MobileNetV2 預設用 224x224）
 BATCH_SIZE = 32               # 每批訓練圖片數量
-EPOCHS = 5                    # 訓練輪數（建議初學先少跑）
+EPOCHS = 5                    # 訓練輪數
 DATASET_DIR = "dataset"       # 資料夾路徑
 
 # 建立資料生成器（含資料增強）
