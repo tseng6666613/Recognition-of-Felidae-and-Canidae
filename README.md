@@ -61,7 +61,7 @@
 | **Accuracy (整體準確率)** | 所有預測中，總共猜對幾張 / 總張數。 | 評估模型整體表現。 |
 
 ---
-![Uploading](./數據_全陌生.png)
+![Uploading](.images/數據_全陌生.png)
 ### 2. 分類報表 (Classification Report)
 根據測試結果，模型在各物種的辨識表現如下：
 
@@ -80,7 +80,7 @@
 > **註：** `none` 與 `unknown` 類別主要作為過濾器使用，旨在提升邊界安全性。
 
 ---
-![Confusion Matrix](./confusion_matrix全陌生.png)
+![Confusion Matrix](.images/confusion_matrix全陌生.png)
 ### 3. 混淆矩陣 (Confusion Matrix) 分析
 透過混淆矩陣，我們能深入了解模型在哪些類別之間容易產生誤判：
 
