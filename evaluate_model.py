@@ -54,15 +54,15 @@ for class_folder in os.listdir(test_base):
         confidences.append(confidence)
 
 # 產出報告
-print("\n📊 準確率報告：")
+print("\n 準確率報告：")
 print(classification_report(y_true, y_pred, labels=final_classes, zero_division=0))
 
 # 混淆矩陣文字版
-print("\n🧩 混淆矩陣：")
+print("\n 混淆矩陣：")
 cm = confusion_matrix(y_true, y_pred, labels=final_classes)
 print(cm)
 
-# ✅ 可視化混淆矩陣（熱力圖）
+#  可視化混淆矩陣（熱力圖）
 plt.figure(figsize=(12, 10))
 sns.heatmap(cm, annot=True, fmt='d', cmap="Blues",
             xticklabels=final_classes, yticklabels=final_classes)
@@ -72,15 +72,15 @@ plt.title('Confusion Matrix')
 plt.tight_layout()
 plt.savefig("confusion_matrix.png")
 plt.show()
-print("\n✅ 混淆矩陣圖片已儲存為 confusion_matrix.png")
+print("\n 混淆矩陣圖片已儲存為 confusion_matrix.png")
 
-# ✅ 預測結果表格輸出
+#  預測結果表格輸出
 df = pd.DataFrame({
     'TrueLabel': y_true,
     'Predicted': y_pred,
     'Confidence': confidences
 })
 df.to_csv("prediction_report.csv", index=False)
-print("\n✅ 預測結果已儲存為 prediction_report.csv")
+print("\n 預測結果已儲存為 prediction_report.csv")
 
 
